@@ -25,6 +25,9 @@
     "bulk-import:ali": "tsx server/utils/bulk-import-cli.ts ali",
     "bulk-import:all": "tsx server/utils/bulk-import-cli.ts all",
     "resync-transcripts": "tsx server/scripts/resync-all-transcripts.ts",
+    "get-analysis": "tsx server/utils/get-recent-analysis.ts",
+    "analyze-transcripts": "tsx server/utils/analyze-all-transcripts.ts",
+    "thematic-analysis": "tsx server/utils/thematic-call-analysis.ts",
     "deploy:firebase": "firebase deploy --only hosting",
     "deploy:backend": "gcloud run deploy qa-dashboard-api --source . --region us-central1",
     "deploy:all": "npm run build && npm run deploy:firebase && npm run deploy:backend"

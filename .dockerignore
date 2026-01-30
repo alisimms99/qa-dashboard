@@ -1,0 +1,66 @@
+# Node
+node_modules
+npm-debug.log
+pnpm-debug.log
+
+# Source maps
+*.map
+
+# Git
+.git
+.gitignore
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Development
+src
+public
+*.md
+README.md
+DEPLOYMENT.md
+
+# Build artifacts (we copy dist/client explicitly)
+dist/server
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage
+*.test.ts
+*.spec.ts
+
+# Misc
+.prettierrc
+.eslintrc
+tsconfig.json
+tsconfig.server.json
+
+# Firebase
+.firebase
+.firebaserc
+firebase-debug.log
+
+# Google Cloud
+.gcloudignore
+cloudbuild.yaml
+
+# Exports and generated files
+exports
+training-materials
+
+# Webhook config
+server/.webhook-config.json
+
+# CSV files
+*.csv

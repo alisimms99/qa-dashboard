@@ -1,0 +1,47 @@
+steps:
+  # Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/qa-dashboard-api:latest'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/qa-dashboard-api:$SHORT_SHA'
+      - '-f'
+      - 'Dockerfile'
+      - '.'
+
+  # Push Docker image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '--all-tags'
+      - 'gcr.io/$PROJECT_ID/qa-dashboard-api'
+
+  # Deploy to Cloud Run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'qa-dashboard-api'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/qa-dashboard-api:latest'
+      - '--region=us-central1'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
+      - '--add-cloudsql-instances=ojpm-qa-dashboard:us-central1:qa-dashboard-db'
+      - '--set-env-vars'
+      - 'NODE_ENV=production,DB_SOCKET_PATH=/cloudsql/ojpm-qa-dashboard:us-central1:qa-dashboard-db,DB_USER=root,DB_PASSWORD=QADash2024Secure,DB_NAME=qa_dashboard,OPENPHONE_MAIN_PHONE_NUMBER_ID=PNVbbBqeqM,OPENPHONE_OUTBOUND_PHONE_NUMBER_ID=PNBANAZERt,OPENPHONE_USER_ID_JOY=USO5QGjyIS,OPENPHONE_USER_ID_ALI=USamAZurZL'
+      - '--port=8080'
+      - '--memory=512Mi'
+      - '--cpu=1'
+      - '--timeout=300'
+      - '--max-instances=10'
+
+# Timeout for build
+timeout: '1200s'
+
+# Images to be pushed to Container Registry
+images:
+  - 'gcr.io/$PROJECT_ID/qa-dashboard-api:latest'
+  - 'gcr.io/$PROJECT_ID/qa-dashboard-api:$SHORT_SHA'

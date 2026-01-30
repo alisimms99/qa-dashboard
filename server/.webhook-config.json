@@ -1,0 +1,12 @@
+{
+  "webhookId": "WHa6e810a4641a4047a5118a68892c0a00",
+  "webhookUrl": "https://sequestrable-malignly-hugh.ngrok-free.dev/webhooks/openphone/calls",
+  "ngrokUrl": "https://sequestrable-malignly-hugh.ngrok-free.dev/webhooks/openphone/calls",
+  "registeredAt": "2025-11-29T19:01:34.171Z",
+  "events": [
+    "call.completed"
+  ],
+  "resourceIds": [
+    "*"
+  ]
+}

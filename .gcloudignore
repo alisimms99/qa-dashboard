@@ -1,0 +1,109 @@
+# Node
+node_modules
+npm-debug.log
+pnpm-debug.log
+.pnpm-store
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Environment
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Development
+src
+public
+*.md
+README.md
+DEPLOYMENT.md
+docs
+
+# Build artifacts
+dist/server
+*.tsbuildinfo
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Testing
+coverage
+.nyc_output
+*.test.ts
+*.spec.ts
+*.test.js
+*.spec.js
+__tests__
+__mocks__
+
+# Misc
+.prettierrc
+.eslintrc
+.eslintrc.*
+.prettierrc.*
+tsconfig.json
+tsconfig.server.json
+tsconfig.*.json
+
+# Firebase
+.firebase
+.firebaserc
+firebase-debug.log
+firebase-debug.*.log
+
+# Google Cloud
+cloudbuild.yaml
+.gcloudignore
+
+# Exports and generated files
+exports
+training-materials
+server/.webhook-config.json
+
+# CSV files
+*.csv
+
+# Lock files (keep pnpm-lock.yaml but exclude others)
+package-lock.json
+yarn.lock
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Dependencies that might have old timestamps
+.pnpm-store
+.npm
+.yarn
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Build outputs
+build
+out
+.next
+.nuxt
+.cache

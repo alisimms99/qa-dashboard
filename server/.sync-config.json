@@ -1,0 +1,14 @@
+{
+  "lastSyncTimestamp": 1764486000067,
+  "lastSyncResult": {
+    "success": false,
+    "callsSynced": 0,
+    "transcriptsSynced": 0,
+    "analysesTriggered": 0,
+    "errors": [
+      "Failed to fetch calls: getaddrinfo ENOTFOUND api.openphone.com",
+      "Failed to fetch calls: getaddrinfo ENOTFOUND api.openphone.com"
+    ],
+    "duration": 33
+  }
+}

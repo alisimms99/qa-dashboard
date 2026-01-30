@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1764422841416,
+      "tag": "0000_chilly_the_leader",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1764422891062,
+      "tag": "0001_bizarre_scrambler",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1764423990625,
+      "tag": "0002_last_menace",
+      "breakpoints": true
+    }
+  ]
+}
